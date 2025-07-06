@@ -4,100 +4,98 @@
 
 ---
 
-## 🚀 Overview
+## 📚 Academic Project
 
-**EventEase** is a modern venue booking platform tailored for users seeking party palaces, banquet halls, or conference spaces. It streamlines the entire process — from browsing venues and checking real-time availability to customizing services, making payments, and receiving automated confirmations.
-
-Built using cutting-edge technologies like **React.js**, **Laravel**, and **MongoDB**, this system is designed to enhance both **user experience** and **venue management** efficiency.
-
----
-
-## 📸 Sneak Peek
-
-> 📷 UI Screenshots / GIFs of major features (Add later)
+Developed as a course project for **B.E. Software** at  
+**Nepal College of Information Technology (NCIT), Balkumari**  
+**Supervised by:** *Er. Rudra Nepal*
 
 ---
 
-## 🎯 Key Features
+## 🌐 Project Overview
 
-- 🔍 Browse & filter venues by location, type, capacity, and date
-- 📅 Real-time availability checks
-- 🍽️ Custom food/decor options with price estimations
-- 💳 Secure payment via **Khalti**/**eSewa**
-- ✉️ Auto email confirmations (Mail.js) and SMS notifications
-- 📊 Admin dashboard to manage bookings and customer interactions
-- 🔐 Secure authentication and session handling
+**EventEase** is a seamless venue booking platform designed to simplify the event planning process. It lets users browse available venues, select packages, customize their event menu, and confirm bookings with OTP-based authentication. The system is robust, scalable, and admin-manageable.
 
 ---
 
-## ⚙️ Tech Stack
+## 🛠️ Tech Stack
 
-| Layer        | Technology               |
-|--------------|--------------------------|
-| **Frontend** | React.js, Tailwind CSS   |
-| **Backend**  | Laravel                  |
-| **Database** | MongoDB                  |
-| **UI Design**| Figma                    |
-| **Payments** | Khalti, eSewa            |
-| **Alerts**   | Mail.js (email), SMS API |
+- **Frontend:** React (Vite)
+- **Backend:** Node.js + Express
+- **Database:** MySQL + Sequelize ORM
+- **Other Tools:** OTP Verification (e.g., Twilio), JSON-based menu configuration
 
 ---
 
-## 🧠 System Architecture
+## ✨ Key Features
 
-> Add system design image here (`/assets/system-architecture.png`)  
-An integrated architecture involving:
-- Client App
-- API layer (Laravel)
-- Notification System (Mail.js & SMS)
-- MongoDB as central data store
+### 🔁 Booking Workflow
+1. **Choose Event Date**  
+2. **Select Event Type** *(from `events` table)*  
+3. **Enter Number of Guests**  
+4. **Pick Venue** *(from `venues` table with image and capacity)*  
+5. **Choose Shift** *(from `shifts` table)*  
+6. **Availability Check**  
+   - Checks `bookings` table for existing confirmed bookings.
+   - Prompts user if slot is unavailable.
+7. **Package Selection** *(from `packages` table — shows name and base price)*  
+8. **Menu Customization**  
+   - Menu items linked to packages (stored as JSON arrays).
+   - `free_limit` indicates number of free items.
+   - Extra items incur additional costs.
+9. **Fare Calculation**  
+   - Formula:  
+     ```
+     Total Fare = (Base Package Price + Extra Menu Cost) * Number of Guests
+     ```
+10. **User Info & OTP Authentication**  
+    - Collects name and phone number.
+    - Sends OTP via SMS.
+    - On successful verification, creates user and saves booking with status `pending`.
 
----
-
-## 📦 Folder Structure
-
-
----
-
-## 👨‍💻 Contributors
-
-| Name                | Role                                 |    
-|---------------------|--------------------------------------|
-| **Harsh Chaudhary** | Backend, DB Management, Alerts       |
-| **Pranil Poudel**   | UI/UX Design, Coordination, Frontend |
-| **Ankit Katwal**    | Frontend Development, DB Support     |
-| **Kaushal Sah**     | Payment Integration, Auth            |
-
----
-
-## 📝 Development Workflow
-
-- ✅ Iterative Agile-based development
-- 🔁 Regular testing, validation, and stakeholder feedback
-- 🔐 Pre-deployment checks (security, performance, cross-browser)
-- 📤 Final deployment with CI/CD support (planned)
+11. **Admin Panel**  
+    - Admins can manage bookings, update status, and view all details.
 
 ---
 
-## ⏳ What's Coming Next?
+## 📷 Screenshots & Demo
 
-- 📱 Mobile responsiveness polish
-- 🧪 Final security testing & optimization
-- ☁️ Production deployment
-- 📘 Final documentation + user guide
+- **Booking Interface Preview**  
+  ![Screenshot Placeholder](#) <!-- Replace with actual image link -->
 
----
-
-## 📄 License
-
-
+- **Video Demo**  
+  [Watch Demo](#) <!-- Replace with actual video link -->
 
 ---
 
-## 📬 Contact & Acknowledgements
+## 🗃️ Database Schema (Example)
 
-> Made with ❤️ by Software Engineering students of Nepal Colelge of Information Technology [Pokhara University]  
-> Under the guidance of *Er. Rudra Nepal*
+```sql
+CREATE TABLE events (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+```
+
+> Other tables: `venues`, `shifts`, `packages`, `menus`, `users`, `bookings`
 
 ---
 
+## 👨‍💻 Project Team
+
+| Name                | Role                                  | Roll Number |
+|---------------------|---------------------------------------|-------------|
+| **Harsh Chaudhary** | Backend, DB Management, Alerts        | 221715      |
+| **Pranil Poudel**   | UI/UX Design, Coordination, Frontend  | 221734      |
+| **Ankit Katwal**    | Frontend Development, DB Support      | 221610      |
+| **Kaushal Sah**     | Payment Integration, Auth             | 221716      |
+
+---
+
+## 📩 Contact & Contributions
+
+For queries, improvements, or collaboration, feel free to contact any team member or create a pull request.
+
+---
