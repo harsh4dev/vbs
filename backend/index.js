@@ -125,7 +125,7 @@ const adminuserRoutes = require('./routes/adminUsersRoutes');
 const userRoutes = require('./routes/users');
 
 app.get('/', (req, res) => {
-  res.send('🎉 Welcome to the API!');
+  res.send('🎉 Welcome to the Backend API!');
 });
 
 app.use('/api/admin', adminRoutes);
