@@ -90,7 +90,7 @@ CREATE TABLE events (
 | **Harsh Chaudhary** | Backend, DB Management, Alerts        | 221715      |
 | **Pranil Poudel**   | UI/UX Design, Coordination, Frontend  | 221734      |
 | **Ankit Katwal**    | Frontend Development, DB Support      | 221610      |
-| **Kaushal Sah**     | Payment Integration, Auth             | 221716      |
+| **Kaushal Sah**     | Payment Integration                   | 221716      |
 
 ---
 
