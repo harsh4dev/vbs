@@ -63,9 +63,9 @@ An integrated architecture involving:
 
 | Name                | Role                                 |    
 |---------------------|--------------------------------------|
+| **Harsh Chaudhary** | Backend, DB Management, Alerts       |
 | **Pranil Poudel**   | UI/UX Design, Coordination, Frontend |
 | **Ankit Katwal**    | Frontend Development, DB Support     |
-| **Harsh Chaudhary** | Backend, DB Management, Alerts       |
 | **Kaushal Sah**     | Payment Integration, Auth            |
 
 ---
