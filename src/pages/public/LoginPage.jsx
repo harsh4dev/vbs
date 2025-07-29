@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { toast } from 'react-toastify';
-import Button from '../../components/Button'; // <-- Import the new Button
+import Button from '../../components/Button'; 
 
 function LoginPage() {
   const [email, setEmail] = useState('');
