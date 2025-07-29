@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { toast } from 'react-toastify';
-import Button from '../../components/Button'; //
+import Button from '../../components/Button'; 
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -136,7 +136,14 @@ function LoginPage() {
             </Button>
           </div>
 
-       
+          <div className="text-sm text-center">
+            <Link
+              to="/register"
+              className="font-medium text-indigo-300 hover:text-indigo-200 transition-all"
+            >
+              Don't have an account? Sign up
+            </Link>
+          </div>
         </form>
       </div>
     </div>
