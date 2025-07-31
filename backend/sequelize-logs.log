@@ -1,0 +1,7 @@
+[2025-05-08T21:28:11.020Z] info: Executing (default): SELECT 1+1 AS result
+[2025-05-08T21:28:11.024Z] info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Events' AND TABLE_SCHEMA = 'venue_booking_system'
+[2025-05-08T21:28:11.028Z] info: Executing (default): SHOW INDEX FROM `Events`
+[2025-05-08T21:28:33.102Z] info: Executing (default): SELECT 1+1 AS result
+[2025-05-08T21:28:33.106Z] info: Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Events' AND TABLE_SCHEMA = 'venue_booking_system'
+[2025-05-08T21:28:33.111Z] info: Executing (default): SHOW INDEX FROM `Events`
+[2025-05-08T21:29:27.859Z] info: Executing (default): SELECT `id`, `name`, `createdAt`, `updatedAt` FROM `Events` AS `Event`;
