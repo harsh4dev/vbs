@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verification - EventEase</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    /* Custom styles for fine-tuning */
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Arial', sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .logo {
+      max-width: 150px;
+      height: auto;
+    }
+    .success-icon::before {
+      content: '✔';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .error-icon::before {
+      content: '✖';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background-color: #EF4444;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 15px;
+      }
+      .logo {
+        max-width: 120px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container bg-white rounded-lg shadow-lg">
+    <!-- Header -->
+    <header class="text-center py-6 border-b border-gray-200">
+      <!-- <img src="/images/aonecafe-logo.png" alt="EventEase Logo" class="logo mx-auto mb-4"> -->
+      <h1 class="text-2xl font-bold text-gray-800">EventEase - Email Verification</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-8 px-6">
+      <% if (status === 'success') { %>
+        <div class="text-center">
+          <div class="success-icon"></div>
+          <h2 class="text-xl font-semibold text-green-600 mb-4">Verification Successful!</h2>
+          <p class="text-gray-600 mb-6">
+            Your email <span class="font-medium"><%= email %></span> has been successfully verified.
+            Thank you for joining EventEase! Proceed to log in to continue your booking.
+          </p>
+          <a
+            href="/login"
+            class="inline-block px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 transition-colors"
+          >
+            Go to Login
+          </a>
+        </div>
+      <% } else { %>
+        <div class="text-center">
+          <div class="error-icon"></div>
+          <h2 class="text-xl font-semibold text-red-600 mb-4">Verification Failed</h2>
+          <p class="text-gray-600 mb-6">
+            <%= message %>
+          </p>
+          <p class="text-gray-600 mb-6">
+            Please try again or request a new verification link from EventEase.
+          </p>
+          <a
+            href="/api/resend-verification?email=<%= encodeURIComponent(email) %>"
+            class="inline-block px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 transition-colors"
+          >
+            Resend Verification Link
+          </a>
+          <p class="mt-4 text-sm text-gray-500">
+            Already verified? <a href="/login" class="text-green-500 hover:underline">Log in here</a>.
+          </p>
+        </div>
+      <% } %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 text-center border-t border-gray-200">
+      <p class="text-sm text-gray-600">
+        Need help? Contact our <a href="mailto:harshchy143@gmail.com" class="text-green-500 hover:underline">support team</a>.
+      </p>
+      <p class="text-sm text-gray-500 mt-2">
+        © <%= new Date().getFullYear() %> EventEase. All rights reserved.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
