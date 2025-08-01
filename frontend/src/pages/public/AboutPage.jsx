@@ -183,7 +183,7 @@ const AboutPage = () => {
               Our Creative Team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Meet the passionate individuals who bring Indian traditions to life in every event.
+              Meet the passionate individuals who bring Nepalese traditions to life in every event.
             </p>
           </div>
           <motion.div
