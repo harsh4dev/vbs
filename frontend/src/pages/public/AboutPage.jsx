@@ -8,21 +8,21 @@ const AboutPage = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Ananya Sharma',
+      name: 'Ananya Pandey',
       role: 'Founder & Creative Director',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1',
       bio: 'Ananya’s passion for Indian traditions and modern elegance shapes our unforgettable events.',
     },
     {
       id: 2,
-      name: 'Vikram Patel',
+      name: 'Rajesh Hamal',
       role: 'Operations Manager',
       image: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1',
       bio: 'Vikram ensures seamless execution, blending precision with Indian hospitality.',
     },
     {
       id: 3,
-      name: 'Priya Mehra',
+      name: 'Priyanka Karki',
       role: 'Event Designer',
       image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1',
       bio: 'Priya crafts stunning designs inspired by India’s rich cultural heritage.',
@@ -35,19 +35,19 @@ const AboutPage = () => {
       id: 1,
       title: 'Passion',
       icon: <Heart className="h-8 w-8 text-secondary-500" />,
-      description: 'We infuse every event with the warmth and vibrancy of Indian celebrations.',
+      description: 'We infuse every event with the warmth and vibrancy of Nepali celebrations.',
     },
     {
       id: 2,
       title: 'Excellence',
       icon: <Award className="h-8 w-8 text-secondary-500" />,
-      description: 'We deliver world-class service rooted in Indian traditions of perfection.',
+      description: 'We deliver world-class service rooted in Nepali traditions of perfection.',
     },
     {
       id: 3,
       title: 'Community',
       icon: <Users className="h-8 w-8 text-secondary-500" />,
-      description: 'We foster bonds, celebrating togetherness like an Indian family.',
+      description: 'We foster bonds, celebrating togetherness like a Nepali family.',
     },
   ];
 
@@ -87,7 +87,7 @@ const AboutPage = () => {
           >
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Who We Are</h1>
             <p className="text-lg md:text-xl mb-6">
-              At Surbhi Venues, we blend Indian traditions with modern elegance to create unforgettable events.
+              At EventEase, we blend Indian traditions with modern elegance to create unforgettable events.
             </p>
             {/* <Link
               to="/contact"
@@ -114,10 +114,10 @@ const AboutPage = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                Founded in 2015 in Mumbai, Surbhi Venues is dedicated to crafting events that celebrate India’s rich cultural heritage. From vibrant weddings to corporate galas, we create moments that resonate with tradition and modernity.
+                Founded in 2025 in NCIT, EventEase is dedicated to crafting events that celebrate Nepal’s rich cultural heritage. From vibrant weddings to corporate galas, we create moments that resonate with tradition and modernity.
               </p>
               <p className="text-lg text-gray-600">
-                Our mission is to provide exceptional venues and personalized services, ensuring every event reflects the unique spirit of our clients, inspired by the diversity of India.
+                Our mission is to provide exceptional venues and personalized services, ensuring every event reflects the unique spirit of our clients, inspired by the diversity of Nepal.
               </p>
             </motion.div>
             <motion.div
@@ -146,7 +146,7 @@ const AboutPage = () => {
               What We Stand For
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our values reflect the heart of Indian hospitality, guiding us to deliver exceptional experiences.
+              Our values reflect the heart of Nepals' hospitality, guiding us to deliver exceptional experiences.
             </p>
           </div>
           <motion.div
