@@ -1,0 +1,15 @@
+APIs
+
+https://noded.harshchaudhary.com.np/api/admin/signup
+
+//Format
+
+//Body|
+{
+    "name": "harsh",
+    "email": "harsh@gmail.com",
+    "password": "harsh"
+}
+
+Content-Type application/json
+
